@@ -1,0 +1,170 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --bg-dark: #0f172a;
+  --bg-dark-2: #020617;
+  --primary: #22c55e;
+
+  --text-main: #ffffff;
+  --text-muted: #cbd5f5;
+
+  --font-title: 'Poppins', sans-serif;
+  --font-text: 'Inter', sans-serif;
+}
+
+/* BASE */
+body {
+  font-family: var(--font-text);
+  background: #ffffff;
+  color: #111;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  padding: 3rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top, #1e293b, var(--bg-dark)),
+    linear-gradient(to bottom, var(--bg-dark-2), var(--bg-dark));
+}
+
+/* DEGRADÊ TOPO E BASE */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45), transparent);
+}
+
+.hero::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.45), transparent);
+}
+
+/* TEXTO */
+.hero-text {
+  position: relative;
+  text-align: center;
+  z-index: 5;
+  max-width: 90%;
+}
+
+.hero-text h1 {
+  font-family: var(--font-title);
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #ffffff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text h2 {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* ================= CAMISAS ================= */
+
+.hero-images {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+
+  z-index: 3;
+  pointer-events: none; /* não atrapalha clique */
+}
+
+/* mantém dentro do header */
+.hero-images.left {
+  left: 0;
+  padding-left: 1rem;
+}
+
+.hero-images.right {
+  right: 0;
+  padding-right: 1rem;
+}
+
+/* CAMISAS GRANDES */
+.hero-images img {
+  width: 150px; /* AUMENTADO */
+  max-width: 40vw; /* mobile safe */
+  opacity: 0.95;
+
+  will-change: transform;
+}
+
+/* SOBREPOSIÇÃO REAL (funciona mesmo com PNG quadrado) */
+.hero-images img:nth-child(1) {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.hero-images img:nth-child(2) {
+  transform: translateX(-50px);
+  z-index: 2;
+}
+
+.hero-images img:nth-child(3) {
+  transform: translateX(-100px);
+  z-index: 3;
+}
+
+/* INVERTE NO LADO DIREITO */
+.hero-images.right img:nth-child(1) {
+  transform: translateX(0);
+}
+
+.hero-images.right img:nth-child(2) {
+  transform: translateX(50px);
+}
+
+.hero-images.right img:nth-child(3) {
+  transform: translateX(100px);
+}
+
+/* ================= ANIMAÇÃO ================= */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
