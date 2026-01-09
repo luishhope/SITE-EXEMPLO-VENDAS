@@ -10,3 +10,18 @@ document.querySelectorAll('.expand-arrow').forEach(button => {
     section.classList.toggle('expanded');
   });
 });
+const productCards = document.querySelectorAll(".product-card");
+
+productCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const params = new URLSearchParams({
+      id: card.dataset.id,
+      name: card.dataset.name,
+      price: card.dataset.price,
+      image: card.dataset.image,
+      description: card.dataset.description
+    });
+
+    window.location.href = `product.html?${params.toString()}`;
+  });
+});
