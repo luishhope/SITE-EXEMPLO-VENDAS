@@ -28,9 +28,130 @@
   <div class="hero-images right">
     <img src="imgs/camisarealmadridjogador11.png" alt="Camisa time">
     <img src="imgs/camisapsg1202526.png" alt="Camisa time">
-    <img src="imgs/CAMISA-ATLETICO-DE-MADRID-1-2025-1-1-.png" alt="Camisa time">
+    <img src="imgs/IV6047_1_APPAREL_Photography_Front-View_white-png-removebg-preview.png" alt="Camisa time">
   </div>
+
+  <!-- SEARCH BAR -->
+<div class="hero-search">
+  <span class="search-hint">O que você está procurando?</span>
+
+  <form class="search-container" role="search">
+    <input
+      type="search"
+      placeholder="Ex: Camisa do Flamengo, Seleção Brasileira..."
+      aria-label="Buscar produtos"
+    />
+
+    <button type="submit" aria-label="Pesquisar">
+      🔍
+    </button>
+  </form>
+
+  <!-- sugestões visuais (UI apenas) -->
+  <ul class="search-suggestions">
+    <li>Camisas Brasileirão</li>
+    <li>Seleções Nacionais</li>
+    <li>Camisas Europeias</li>
+    <li>Camisas Retrô</li>
+  </ul>
+</div>
+
 </header>
+
+<!-- CATEGORIAS -->
+<aside class="categories">
+  <ul class="categories-list">
+    <li class="category-item">Camisas Retrô</li>
+    <li class="category-item">Seleções</li>
+    <li class="category-item">Brasileirão</li>
+    <li class="category-item">Europeias</li>
+    <li class="category-item">Edição Especial</li>
+    <li class="category-item">Treino</li>
+  </ul>
+</aside>
+
+<main class="store">
+
+  <!-- CAMISAS RETRÔ -->
+  <section class="store-section" id="retro" data-category="retro">
+    <h3 class="section-title">Camisas Retrô</h3>
+
+    <div class="products-grid">
+      <article class="product-card">
+        <img src="img/camisa1.png">
+        <h4>Flamengo 1995</h4>
+        <span class="price">R$ 249,90</span>
+      </article>
+
+      <article class="product-card">
+        <img src="img/camisa2.png">
+        <h4>Brasil 1970</h4>
+        <span class="price">R$ 269,90</span>
+      </article>
+
+      <article class="product-card">
+        <img src="img/camisa3.png">
+        <h4>Milan 1989</h4>
+        <span class="price">R$ 289,90</span>
+      </article>
+
+      <article class="product-card hidden">
+        <img src="img/camisa4.png">
+        <h4>Ajax 1995</h4>
+        <span class="price">R$ 259,90</span>
+      </article>
+
+      <article class="product-card hidden">
+        <img src="img/camisa5.png">
+        <h4>Barcelona 1999</h4>
+        <span class="price">R$ 279,90</span>
+      </article>
+
+      <article class="product-card hidden">
+        <img src="img/camisa6.png">
+        <h4>Corinthians 2000</h4>
+        <span class="price">R$ 239,90</span>
+      </article>
+    </div>
+
+    <button class="expand-arrow" aria-label="Expandir sessão"></button>
+  </section>
+
+  <!-- SELEÇÕES -->
+  <section class="store-section" id="selecoes">
+    <h3 class="section-title">Seleções</h3>
+
+    <div class="products-grid">
+      <article class="product-card"><img src="img/camisa1.png"><h4>Brasil 2022</h4><span class="price">R$ 299,90</span></article>
+      <article class="product-card"><img src="img/camisa2.png"><h4>Argentina 2022</h4><span class="price">R$ 299,90</span></article>
+      <article class="product-card"><img src="img/camisa3.png"><h4>França 2018</h4><span class="price">R$ 289,90</span></article>
+
+      <article class="product-card hidden"><img src="img/camisa4.png"><h4>Alemanha 1990</h4><span class="price">R$ 279,90</span></article>
+      <article class="product-card hidden"><img src="img/camisa5.png"><h4>Itália 2006</h4><span class="price">R$ 269,90</span></article>
+      <article class="product-card hidden"><img src="img/camisa6.png"><h4>Holanda 1988</h4><span class="price">R$ 289,90</span></article>
+    </div>
+
+    <button class="expand-arrow"></button>
+  </section>
+
+  <!-- EUROPEIAS -->
+  <section class="store-section" id="europeias">
+    <h3 class="section-title">Europeias</h3>
+
+    <div class="products-grid">
+      <article class="product-card"><img src="img/camisa1.png"><h4>Real Madrid</h4><span class="price">R$ 319,90</span></article>
+      <article class="product-card"><img src="img/camisa2.png"><h4>Barcelona</h4><span class="price">R$ 309,90</span></article>
+      <article class="product-card"><img src="img/camisa3.png"><h4>Manchester City</h4><span class="price">R$ 329,90</span></article>
+
+      <article class="product-card hidden"><img src="img/camisa4.png"><h4>PSG</h4><span class="price">R$ 299,90</span></article>
+      <article class="product-card hidden"><img src="img/camisa5.png"><h4>Milan</h4><span class="price">R$ 289,90</span></article>
+      <article class="product-card hidden"><img src="img/camisa6.png"><h4>Bayern</h4><span class="price">R$ 319,90</span></article>
+    </div>
+
+    <button class="expand-arrow"></button>
+  </section>
+
+</main>
 
     
 
@@ -40,6 +161,11 @@
 
 
 
+<!-- FLOATING CART -->
+<button class="floating-cart" aria-label="Carrinho">
+  <img src="imgs/126510.png" alt="Carrinho">
+  <span class="cart-count">0</span>
+</button>
 
 <script src="index.js"></script>
 </body>
