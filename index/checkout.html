@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | GoalStore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+  <header class="checkout-header">
+    <a href="cart.html" class="back-link">← Voltar ao carrinho</a>
+    <h1>Finalizar compra</h1>
+  </header>
+
+  <main class="checkout-container">
+
+    <!-- FORM -->
+    <form id="checkoutForm" class="checkout-form">
+
+      <section>
+        <h2>Dados pessoais</h2>
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="tel" placeholder="Telefone" required>
+      </section>
+
+      <section>
+        <h2>Endereço</h2>
+        <input type="text" placeholder="CEP" required>
+        <input type="text" placeholder="Endereço" required>
+        <input type="text" placeholder="Número" required>
+        <input type="text" placeholder="Cidade" required>
+        <input type="text" placeholder="Estado" required>
+      </section>
+
+      <section>
+        <h2>Pagamento</h2>
+
+        <label class="payment-option">
+          <input type="radio" name="payment" required>
+          <img src="assets/pix.png" alt="Pix">
+          <span>Pix</span>
+        </label>
+
+        <label class="payment-option">
+          <input type="radio" name="payment">
+          <img src="assets/card.png" alt="Cartão">
+          <span>Cartão de crédito</span>
+        </label>
+
+        <label class="payment-option">
+          <input type="radio" name="payment">
+          <img src="assets/boleto.png" alt="Boleto">
+          <span>Boleto</span>
+        </label>
+      </section>
+
+      <button type="submit" class="pay-btn">
+        Concluir pagamento
+      </button>
+
+    </form>
+
+    <!-- RESUMO -->
+    <aside class="checkout-summary">
+      <h3>Resumo do pedido</h3>
+      <div id="summaryItems"></div>
+      <div class="summary-total">
+        <span>Total</span>
+        <span id="summaryTotal">R$ 0,00</span>
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
