@@ -5,36 +5,67 @@
   <title>Produto | GoalStore</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="product.css">
 </head>
 <body>
 
-  <!-- BOTÃO VOLTAR -->
-  <a href="index.html" class="back-button">← Voltar</a>
-
   <main class="product-page">
+    <a href="index.html" class="back-link">← Voltar para a loja</a>
+
     <div class="product-container">
 
+      <!-- IMAGEM -->
       <div class="product-image">
         <img id="productImage" alt="Imagem do produto">
       </div>
 
+      <!-- INFO -->
       <div class="product-info">
         <h1 id="productName"></h1>
         <span class="product-price" id="productPrice"></span>
 
         <p id="productDescription"></p>
 
-        <button class="add-to-cart">
-          🛒 Adicionar ao carrinho
-        </button>
-      </div>
+        <!-- TAMANHOS -->
+        <div class="sizes">
+          <span>Tamanho:</span>
+          <div class="size-options">
+            <button data-size="P">P</button>
+            <button data-size="M" class="active">M</button>
+            <button data-size="G">G</button>
+            <button data-size="GG">GG</button>
+          </div>
+        </div>
 
+        <!-- QUANTIDADE -->
+        <div class="quantity">
+          <span>Quantidade:</span>
+          <div class="quantity-control">
+            <button id="minus">−</button>
+            <input type="number" id="quantity" value="1" min="1">
+            <button id="plus">+</button>
+          </div>
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="actions">
+          <button class="add-to-cart">Adicionar ao carrinho</button>
+          <button class="buy-now">Comprar agora</button>
+        </div>
+
+        <!-- INFO EXTRA -->
+        <ul class="extra-info">
+          <li>✔ Produto original e premium</li>
+          <li>✔ Envio rápido para todo o Brasil</li>
+          <li>✔ 7 dias para troca ou devolução</li>
+        </ul>
+
+      </div>
     </div>
   </main>
 

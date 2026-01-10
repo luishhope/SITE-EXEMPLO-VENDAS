@@ -820,3 +820,20 @@ body {
   }
 }
 
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #0f172a;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s;
+  z-index: 9999;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
