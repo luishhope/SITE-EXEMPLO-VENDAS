@@ -22,3 +22,11 @@ document.getElementById("checkoutForm").addEventListener("submit", e => {
   localStorage.removeItem("cart"); // limpa carrinho fake
   window.location.href = "succes.html";
 });
+document.querySelector(".pay-btn").onclick = e => {
+  e.target.innerText = "Processando pagamento...";
+  e.target.disabled = true;
+
+  setTimeout(() => {
+    window.location.href = "succes.html";
+  }, 1800);
+};

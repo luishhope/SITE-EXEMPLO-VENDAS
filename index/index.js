@@ -27,3 +27,32 @@ function updateCartCount() {
 }
 
 updateCartCount();
+// SCROLL SUAVE PARA CATEGORIA
+const categoryButtons = document.querySelectorAll(".category-item");
+
+categoryButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.dataset.target;
+    const section = document.getElementById(targetId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // opcional: destacar botão ativo
+    categoryButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
+});
+// SCROLL SUAVE PARA LINKS DE CATEGORIA DO FOOTER
+document.querySelectorAll('.footer-col ul li a[data-target]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.dataset.target;
+    const section = document.getElementById(targetId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});

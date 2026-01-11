@@ -2,51 +2,182 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Pagamento concluído</title>
+  <title>Pagamento confirmado | GoalStore</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --green: #22c55e;
+      --dark: #111827;
+      --muted: #6b7280;
+      --bg: #f9fafb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
     body {
-      background: #f9fafb;
+      background: var(--bg);
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      font-family: Inter, sans-serif;
+      justify-content: center;
+      padding: 1.5rem;
     }
 
     .success-box {
       background: #fff;
-      padding: 3rem;
-      border-radius: 20px;
+      max-width: 420px;
+      width: 100%;
+      padding: 3rem 2.5rem;
+      border-radius: 24px;
       text-align: center;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+      animation: fadeUp 0.6s ease;
     }
 
-    .success-box h1 {
-      margin-bottom: 1rem;
+    /* CHECK ANIMADO */
+    .check-wrapper {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 1.5rem;
     }
 
-    .success-box a {
-      display: inline-block;
-      margin-top: 1.5rem;
+    .check-circle {
+      fill: none;
+      stroke: var(--green);
+      stroke-width: 6;
+      stroke-dasharray: 283;
+      stroke-dashoffset: 283;
+      animation: circle 0.6s ease forwards;
+    }
+
+    .check {
+      fill: none;
+      stroke: var(--green);
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 50;
+      stroke-dashoffset: 50;
+      animation: check 0.4s ease forwards 0.6s;
+    }
+
+    @keyframes circle {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes check {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin-bottom: 0.6rem;
+      color: var(--dark);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .info {
+      background: #f9fafb;
+      border-radius: 14px;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 1.8rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #052e16;
       text-decoration: none;
-      background: #111827;
-      color: #fff;
-      padding: 0.9rem 1.6rem;
+      padding: 0.9rem;
       border-radius: 999px;
       font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(34,197,94,0.35);
+    }
+
+    .btn-secondary {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .emoji {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
 
   <div class="success-box">
-    <h1>Pagamento concluído 🎉</h1>
-    <p>Seu pedido foi realizado com sucesso.</p>
-    <a href="index.html">Voltar para a loja</a>
+
+    <!-- CHECK ANIMADO -->
+    <div class="check-wrapper">
+      <svg viewBox="0 0 100 100">
+        <circle class="check-circle" cx="50" cy="50" r="45"/>
+        <path class="check" d="M30 52 L45 67 L70 40"/>
+      </svg>
+    </div>
+
+    <h1>Pagamento confirmado</h1>
+    <p class="subtitle">Estamos quase lá… deu tudo certo ⚽</p>
+
+    <div class="info">
+      Seu pedido foi processado com sucesso.<br>
+      Você receberá os detalhes no seu e-mail em instantes.
+    </div>
+
+    <div class="actions">
+      <a href="index.html" class="btn-primary">
+        Voltar para a loja
+      </a>
+      <a href="#" class="btn-secondary">
+        Ver detalhes do pedido
+      </a>
+    </div>
+
+    <div class="emoji">
+      Obrigado por comprar na GoalStore 💚
+    </div>
+
   </div>
 
 </body>
