@@ -791,3 +791,16 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+/* ================= HERO MOBILE CLEAN ================= */
+@media (max-width: 768px) {
+  /* esconde as camisas do header */
+  .hero-images {
+    display: none;
+  }
+
+  /* garante que o texto continue bem centralizado */
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+}
