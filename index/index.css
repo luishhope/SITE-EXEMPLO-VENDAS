@@ -804,3 +804,143 @@ body {
     padding-bottom: 6rem;
   }
 }
+/* =====================================================
+   MOBILE POLISH — HOME PRINCIPAL
+   Ajustes finais mobile (header central e mais baixo)
+===================================================== */
+@media (max-width: 768px) {
+
+  /* ================= HERO / HEADER ================= */
+
+  .hero {
+    min-height: auto;
+    padding: 2rem 1rem 3.2rem; /* reduz altura total */
+    display: flex;
+    flex-direction: column;   /* mantém VERTICAL */
+    align-items: center;      /* centraliza tudo */
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 520px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+  }
+
+  .hero-text h2 {
+    font-size: 0.9rem;
+  }
+
+  /* ================= SEARCH ================= */
+
+  .hero-search {
+    position: relative;
+    margin-top: 3.5rem;
+    margin-bottom: 0rem;
+    width: 100%;
+    max-width: 420px;   /* evita ir pra esquerda */
+    padding: 0;
+  }
+
+  .search-hint {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .search-container input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.85rem 1.2rem;
+  }
+
+  /* sugestões mais compactas */
+  .search-suggestions {
+    width: 100%;
+  }
+
+  .search-suggestions li {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* ================= CATEGORIES ================= */
+
+  .categories-list {
+    gap: 0.6rem;
+  }
+
+  .category-item {
+    font-size: 0.8rem;
+    padding: 0.55rem 1rem;
+  }
+
+  /* ================= GRID DE PRODUTOS ================= */
+
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+  }
+
+  .product-card {
+    padding: 0.7rem;
+    border-radius: 14px;
+  }
+
+  .product-card img {
+    margin-bottom: 0.5rem;
+  }
+
+  .product-card h4 {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .product-card .price {
+    font-size: 0.8rem;
+  }
+
+  /* ================= SECTION HEADER ================= */
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .section-header h3 {
+    font-size: 1.25rem;
+  }
+
+  /* ================= FOOTER ================= */
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .footer-col h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer-col h5 {
+    font-size: 0.9rem;
+  }
+
+  .footer-col p,
+  .footer-col ul li a {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+  }
+
+}

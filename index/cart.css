@@ -263,3 +263,103 @@ body {
 .checkout-btn:active {
   transform: scale(0.97);
 }
+/* =====================================================
+   MOBILE POLISH — CART
+   Apenas ajustes mobile
+===================================================== */
+@media (max-width: 768px) {
+
+  /* ================= HEADER ================= */
+
+  .cart-header {
+    padding: 1.4rem 1rem;
+  }
+
+  .cart-header-inner {
+    gap: 0.6rem;
+  }
+
+  .cart-title {
+    font-size: 1.2rem;
+  }
+
+  .cart-title img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ================= PAGE ================= */
+
+  .cart-page {
+    padding: 1.2rem 0.8rem;
+    gap: 1.6rem;
+  }
+
+  /* ================= ITEM ================= */
+
+  .cart-item {
+    padding: 1rem;
+    gap: 0.8rem;
+    border-radius: 14px;
+  }
+
+  .cart-item img {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+  }
+
+  .cart-info h2 {
+    font-size: 1rem;
+  }
+
+  .cart-info span {
+    font-size: 0.85rem;
+  }
+
+  .cart-info .price {
+    font-size: 1rem;
+  }
+
+  .cart-actions {
+    gap: 0.4rem;
+  }
+
+  .remove-btn {
+    font-size: 0.85rem;
+  }
+
+  /* ================= SUMMARY ================= */
+
+  .cart-summary {
+    padding: 1.4rem;
+    border-radius: 14px;
+  }
+
+  .cart-summary h3 {
+    font-size: 1.2rem;
+  }
+
+  .summary-line {
+    font-size: 0.9rem;
+  }
+
+  .summary-total {
+    font-size: 1.15rem;
+  }
+
+  /* ================= BUTTON ================= */
+
+  .checkout-btn {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  /* ================= EMPTY ================= */
+
+  .empty-cart {
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+}
